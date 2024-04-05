@@ -23,11 +23,11 @@ const Start = async () => {
 
     console.log(` - Click tab: ${trade_btn.textContent}`);// buy/sell button
     trade_btn.click();
-    await new Promise(resolve => setTimeout(resolve, 700));
+    await new Promise(resolve => setTimeout(resolve, 550));
 
     console.log(` - Click button: ${document.getElementsByClassName('bg-baseBackgroundL1')[3].textContent}`); //max button
     document.getElementsByClassName('bg-baseBackgroundL1')[3].click(); 
-    await new Promise(resolve => setTimeout(resolve, 700));
+    await new Promise(resolve => setTimeout(resolve, 550));
 
     console.log(`   === ${trade_btn.textContent} ===`);
     if (trade_btn.textContent === 'Buy'){
@@ -40,7 +40,7 @@ const Start = async () => {
 
     const randomNumber = Math.floor(Math.random() * (maxSleep - minSleep + 1)) + minSleep; 
     console.log(` - Waiting: ${randomNumber}s ...`);
-    await new Promise(resolve => setTimeout(resolve, randomNumber * 700));
+    await new Promise(resolve => setTimeout(resolve, randomNumber * 500));
     
     count++;
 
